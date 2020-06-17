@@ -1,0 +1,22 @@
+Example Problem:
+
+Maximum sum subarray of Size K. 
+
+Brute force solution: Calculate the sum of every K element contiguous subarray. Since, for every element of the input array, we calculate the sum of it's next K elements, the time complexity will be O(N * K) if N is the array size. 
+
+The problem is we calculate the overlapping part(that contains 4 elements) twice in two consecutive subarrays of size K. A better way is to resuse the calculation we already performed. 
+
+Sliding window solution: Consider each contiguous subarray as a sliding window of K elements. When we move on to the next subarray, we slide the window by one element. Since we moved the window by 1 element, we remove the first element from the window and add the element that is being included in the sliding window. This way, the complexity will be O(N).
+
+More problems that can use the above technique:
+
+1) Smallest Subarray with a given sum.
+2) Longest Substring with K Distinct Characters.
+3) No Repeat Substring.
+4) Longest substring with same letters after replacement. 
+5) Longest Subarray with ones after replacement.
+6) Given a string and a pattern, find if the string contains any permutation of the pattern.
+7) Given a string and a pattern, find all anagrams of the pattern in the given string.
+8) Smallest window containing substring
+9) Given a string and a list of words, find all starting indices of substrings in the given string that are a concatenation of all the given words.
+
